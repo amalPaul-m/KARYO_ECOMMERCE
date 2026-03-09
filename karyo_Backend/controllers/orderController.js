@@ -366,6 +366,7 @@ export const createOrder = async (req, res) => {
 export const createRazorpayOrder = async (req, res) => {
   try {
     const { amount, currency = "INR", receipt } = req.body;
+    console.log("Request body:", req.body);
     if (!amount) return res.status(400).json({ message: "Amount is required" });
     const options = {
       amount: Math.round(amount * 100), // Razorpay expects paise

@@ -112,7 +112,7 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt className="text-primary" />,
       title: "Address",
-      content: "123 Backpack Street, City, State 12345",
+      content: "123 Shuttle Court, City, State 12345",
     },
     {
       icon: <FaPhone className="text-primary" />,
@@ -122,7 +122,7 @@ const Contact = () => {
     {
       icon: <FaEnvelope className="text-primary" />,
       title: "Email",
-      content: "info@caryo.com",
+      content: "info@sportshub.com",
     },
     {
       icon: <FaClock className="text-primary" />,
@@ -364,3 +364,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

@@ -794,7 +794,7 @@ const Checkout = () => {
           key: import.meta.env.VITE_RAZORPAY_KEY_ID || "", // Set in .env frontend
           amount: razorpayOrder.amount,
           currency: razorpayOrder.currency,
-          name: "Karyo1L Store",
+          name: "Sports Hub Store",
           description: "Order Payment",
           order_id: razorpayOrder.id,
           handler: async function (response) {
@@ -952,7 +952,7 @@ const Checkout = () => {
               key: RAZORPAY_KEY,
               amount: razorpayOrder.amount,
               currency: razorpayOrder.currency,
-              name: "Karyo1L Store",
+              name: "Sports Hub Store",
               description: "Order Payment Retry",
               order_id: razorpayOrder.id,
               handler: async function (response) {
@@ -2778,3 +2778,4 @@ const Checkout = () => {
 };
 
 export default Checkout;
+

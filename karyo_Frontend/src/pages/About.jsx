@@ -7,15 +7,15 @@ const About = () => (
       <Col md={8} lg={6}>
         <Card className="shadow-lg border-0 rounded-4 p-4">
           <Card.Body>
-            <h1 className="fw-bold mb-3 text-primary">About CARYO</h1>
+            <h1 className="fw-bold mb-3 text-primary">About SPORTS HUB</h1>
             <p className="lead mb-4">
-              Welcome to <strong>CARYO</strong>! We are your one-stop shop for high-quality backpacks and accessories, dedicated to providing you with the best products and customer experience.
+              Welcome to <strong>SPORTS HUB</strong>! We focus on premium badminton equipment, apparel, and accessories with a strong commitment to player-first service.
             </p>
             <p>
-              Our mission is to deliver stylish, durable, and functional products that fit your lifestyle. Whether you're a student, a professional, or an adventurer, CARYO has something for everyone.
+              Our mission is to deliver durable, performance-driven badminton products for players at every stage, from school teams to competitive clubs.
             </p>
             <p>
-              <strong>Contact us:</strong> info@caryo.com
+              <strong>Contact us:</strong> info@sportshub.com
             </p>
           </Card.Body>
         </Card>

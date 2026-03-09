@@ -58,7 +58,7 @@ const OrderConfirmation = () => {
     doc.setFontSize(22);
     doc.setTextColor(255);
     doc.setFont(undefined, "bold");
-    doc.text("CARYO", 14, 15);
+    doc.text("SPORTS HUB", 14, 15);
     doc.setFontSize(12);
     doc.setTextColor(255);
     doc.setFont(undefined, "normal");
@@ -256,7 +256,7 @@ const OrderConfirmation = () => {
     y += 7;
     doc.setFontSize(10);
     doc.setTextColor(120);
-    doc.text("Thank you for shopping with CARYO!", 14, y);
+    doc.text("Thank you for shopping with SPORTS HUB!", 14, y);
     doc.text("Contact: support@caryo.com", 196, y, { align: "right" });
     doc.save(`Invoice_Order_${currentOrder.orderNumber}.pdf`);
   };
@@ -865,3 +865,4 @@ const OrderConfirmation = () => {
 };
 
 export default OrderConfirmation;
+

@@ -134,7 +134,7 @@ const ReferralProgram = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Join me on CARYO!",
+          title: "Join me on SPORTS HUB!",
           text: `Use my referral code: ${text}`,
           url: text.includes("http") ? text : window.location.origin,
         });
@@ -457,3 +457,4 @@ const ReferralProgram = () => {
 };
 
 export default ReferralProgram;
+

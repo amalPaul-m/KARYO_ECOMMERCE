@@ -283,7 +283,7 @@ const AdminSalesReport = () => {
     // Branding: Company Name
     doc.setFontSize(22);
     doc.setTextColor(41, 128, 185); // blue
-    doc.text("Caryo", 14, 16);
+    doc.text("Sports Hub", 14, 16);
     // Title
     doc.setFontSize(16);
     doc.setTextColor(0, 0, 0);
@@ -651,3 +651,4 @@ const AdminSalesReport = () => {
 };
 
 export default AdminSalesReport;
+

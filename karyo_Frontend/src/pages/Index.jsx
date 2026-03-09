@@ -276,17 +276,17 @@ const Index = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-primary text-white py-5">
+      <div className="sports-hero text-white py-5">
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
               <h1 className="display-4 fw-bold mb-4">
-                Discover Your Perfect Backpack
+                Discover Your Perfect Badminton Kit
               </h1>
               <p className="lead mb-4">
-                Explore our collection of high-quality backpacks designed for
-                every adventure. From urban commuters to outdoor enthusiasts,
-                we've got you covered.
+                Explore our collection of high-performance badminton gear designed for
+                every level of play. From beginners to tournament athletes,
+                we have you covered.
               </p>
               <Button
                 as={Link}
@@ -301,7 +301,7 @@ const Index = () => {
             <Col lg={4} className="d-none d-lg-block">
               <img
                 src="/home4.png"
-                alt="Laptop Backpack PNGTree"
+                alt="Badminton Gear Showcase"
                 className="img-fluid rounded-3 shadow"
               />
             </Col>
@@ -1081,12 +1081,12 @@ const Index = () => {
       </Container>
 
       {/* Features Section */}
-      <div className="bg-light py-5">
+      <div className="py-5">
         <Container>
-          <Row className="g-4">
+          <Row className="g-4 sports-feature-strip p-4 p-md-5">
             <Col md={4}>
               <div className="text-center">
-                <div className="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                <div className="sports-feature-icon rounded-circle p-3 d-inline-block mb-3">
                   <FaShoppingCart size={24} className="text-primary" />
                 </div>
                 <h3 className="h5">Free Shipping</h3>
@@ -1097,7 +1097,7 @@ const Index = () => {
             </Col>
             <Col md={4}>
               <div className="text-center">
-                <div className="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                <div className="sports-feature-icon rounded-circle p-3 d-inline-block mb-3">
                   <FaUser size={24} className="text-primary" />
                 </div>
                 <h3 className="h5">24/7 Support</h3>
@@ -1108,7 +1108,7 @@ const Index = () => {
             </Col>
             <Col md={4}>
               <div className="text-center">
-                <div className="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                <div className="sports-feature-icon rounded-circle p-3 d-inline-block mb-3">
                   <FaSearch size={24} className="text-primary" />
                 </div>
                 <h3 className="h5">Easy Returns</h3>
@@ -1123,3 +1123,4 @@ const Index = () => {
 };
 
 export default Index;
+

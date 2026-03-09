@@ -1,94 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 220 18% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 18% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 18% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 214 72% 15%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 25 100% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 128 67% 52%;
+    --accent-foreground: 220 18% 12%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 22% 95%;
+    --muted-foreground: 215 13% 41%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 214 72% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.85rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 220 18% 12%;
+    --sidebar-primary: 214 72% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 22% 95%;
+    --sidebar-accent-foreground: 220 18% 12%;
+    --sidebar-border: 215 20% 88%;
+    --sidebar-ring: 214 72% 15%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 214 34% 10%;
+    --foreground: 210 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 214 34% 12%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 214 34% 12%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 100% 50%;
+    --primary-foreground: 214 34% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 214 24% 18%;
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 214 24% 18%;
+    --accent-foreground: 210 20% 95%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 214 24% 18%;
+    --muted-foreground: 214 14% 70%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 214 22% 24%;
+    --input: 214 22% 24%;
+    --ring: 25 100% 50%;
+
+    --sidebar-background: 214 34% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 25 100% 50%;
+    --sidebar-primary-foreground: 214 34% 10%;
+    --sidebar-accent: 214 24% 18%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 214 22% 24%;
+    --sidebar-ring: 25 100% 50%;
   }
 }
 
@@ -97,7 +90,697 @@
     @apply border-border;
   }
 
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 400;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(10, 37, 64, 0.08), transparent 36%),
+      radial-gradient(circle at 88% 88%, rgba(50, 215, 75, 0.07), transparent 34%),
+      linear-gradient(180deg, #f9fbfd 0%, #f3f6fa 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #1f2937;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .navbar-brand {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 1.35rem + 2vw, 2.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 1.22rem + 1.3vw, 2.15rem);
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 1.1rem + 0.85vw, 1.75rem);
+  }
+
+  h4 {
+    font-size: clamp(1.17rem, 1.03rem + 0.62vw, 1.36rem);
+  }
+
+  h5 {
+    font-size: clamp(1.05rem, 0.98rem + 0.42vw, 1.22rem);
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p,
+  li,
+  label,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+:root {
+  --bs-primary: #0a2540;
+  --bs-primary-rgb: 10, 37, 64;
+  --bs-secondary: #ff6b00;
+  --bs-secondary-rgb: 255, 107, 0;
+  --bs-info: #0a2540;
+  --bs-info-rgb: 10, 37, 64;
+  --bs-success: #32d74b;
+  --bs-success-rgb: 50, 215, 75;
+  --bs-warning: #ffb23f;
+  --bs-warning-rgb: 255, 178, 63;
+  --bs-link-color: #0a2540;
+  --bs-link-hover-color: #163a61;
+  --sports-primary: #0a2540;
+  --sports-secondary: #ff6b00;
+  --sports-accent: #32d74b;
+  --sports-surface: #ffffff;
+  --sports-surface-soft: #f3f6fa;
+  --ui-border: rgba(10, 37, 64, 0.14);
+  --ui-border-strong: rgba(10, 37, 64, 0.22);
+  --ui-text: #1f2937;
+  --ui-text-muted: #6b7280;
+  --ui-shadow-sm: 0 6px 16px rgba(10, 37, 64, 0.07);
+  --ui-shadow-md: 0 12px 28px rgba(10, 37, 64, 0.11);
+  --ui-shadow-lg: 0 22px 44px rgba(10, 37, 64, 0.15);
+}
+
+.sports-shell {
+  position: relative;
+}
+
+.sports-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(120deg, rgba(10, 37, 64, 0.05), transparent 28%),
+    linear-gradient(300deg, rgba(50, 215, 75, 0.03), transparent 30%);
+  z-index: -1;
+}
+
+main > .container,
+main > .container-fluid {
+  padding-top: 1.15rem;
+  padding-bottom: 1.25rem;
+}
+
+.sports-main {
+  padding-top: 1rem;
+}
+
+.navbar,
+.card,
+.modal-content,
+.dropdown-menu,
+.table {
+  border-radius: 1rem;
+}
+
+.sports-navbar {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--ui-border);
+  box-shadow: var(--ui-shadow-sm);
+  backdrop-filter: blur(10px);
+  padding-block: 0.7rem;
+}
+
+.sports-navbar .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+.sports-brand {
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+  color: var(--sports-primary) !important;
+}
+
+.sports-toggle {
+  border-color: rgba(10, 37, 64, 0.26) !important;
+}
+
+.sports-nav-collapse {
+  flex-grow: 1;
+}
+
+.sports-nav-list {
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.sports-nav-link {
+  font-weight: 600 !important;
+  border-radius: 999px;
+  margin-right: 0.2rem;
+  color: #2b3b4e !important;
+  padding: 0.45rem 0.95rem !important;
+  transition: all 0.2s ease;
+}
+
+.sports-nav-link:hover,
+.sports-nav-link:focus {
+  color: var(--sports-primary) !important;
+  background: rgba(10, 37, 64, 0.1);
+}
+
+.sports-nav-actions {
+  margin-left: auto;
+}
+
+.sports-action-cluster {
+  align-items: center;
+}
+
+.sports-quick-links {
+  margin-right: 0.3rem;
+}
+
+.sports-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  color: #34465a;
+  background: rgba(10, 37, 64, 0.06);
+  border: 1px solid rgba(10, 37, 64, 0.14);
+  transition: all 0.2s ease;
+}
+
+.sports-icon-link:hover {
+  color: var(--sports-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(10, 37, 64, 0.15);
+}
+
+.sports-logout-btn {
+  background: linear-gradient(120deg, #fff3eb, #ffe8d8) !important;
+  border: 1px solid rgba(255, 107, 0, 0.35) !important;
+  color: #b74f00 !important;
+}
+
+.sports-logout-btn:hover,
+.sports-logout-btn:focus {
+  background: linear-gradient(120deg, #ffe4ce, #ffd9be) !important;
+  border-color: rgba(255, 107, 0, 0.48) !important;
+  color: #8e3e00 !important;
+  box-shadow: 0 8px 18px rgba(255, 107, 0, 0.2) !important;
+}
+
+.card {
+  border: 1px solid var(--ui-border) !important;
+  background: linear-gradient(180deg, #ffffff, #f9fbfd) !important;
+  box-shadow: var(--ui-shadow-sm);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--ui-shadow-md);
+}
+
+.card-header,
+.modal-header {
+  background: linear-gradient(180deg, #f9fbfd, #f3f6fa) !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+}
+
+.modal-content {
+  background: #ffffff;
+  box-shadow: var(--ui-shadow-lg);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--ui-border) !important;
+}
+
+.dropdown-menu {
+  border: 1px solid var(--ui-border);
+  box-shadow: var(--ui-shadow-md);
+  background: #ffffff;
+}
+
+.dropdown-item {
+  border-radius: 0.55rem;
+  margin: 0.1rem 0.3rem;
+  width: auto;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(10, 37, 64, 0.09);
+  color: var(--sports-primary);
+}
+
+.table {
+  background: #ffffff;
+  border: 1px solid rgba(10, 37, 64, 0.1);
+  overflow: hidden;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.8rem 0.85rem;
+  border-bottom-color: rgba(10, 37, 64, 0.12);
+}
+
+.table thead th {
+  background: #f3f6fa;
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.table tbody tr:hover {
+  background: rgba(10, 37, 64, 0.045);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.35rem;
+}
+
+.form-control,
+.form-select,
+.input-group-text,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+textarea,
+select,
+[role="combobox"],
+[data-slot="input"] {
+  min-height: 2.85rem;
+  border-radius: 0.8rem !important;
+  border: 1px solid rgba(10, 37, 64, 0.18) !important;
+  background: #ffffff;
+  color: #1f2937;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input-group-text {
+  background: #f3f6fa;
+  color: #4b5563;
+}
+
+.form-control:focus,
+.form-select:focus,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+textarea:focus,
+select:focus,
+[role="combobox"]:focus,
+[data-slot="input"]:focus {
+  background: #ffffff;
+  border-color: rgba(10, 37, 64, 0.46) !important;
+  box-shadow: 0 0 0 0.21rem rgba(10, 37, 64, 0.14) !important;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder,
+.form-control::placeholder {
+  color: #6b7280 !important;
+}
+
+.form-check-input {
+  border-color: rgba(10, 37, 64, 0.35) !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+button,
+.btn,
+[role="button"],
+a.btn {
+  min-height: 2.7rem;
+  border-radius: 0.8rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+[role="button"]:hover,
+a.btn:hover {
+  transform: translateY(-1px);
+}
+
+button:active,
+.btn:active,
+[role="button"]:active,
+a.btn:active {
+  transform: translateY(0);
+}
+
+button:focus-visible,
+.btn:focus-visible,
+[role="button"]:focus-visible,
+a.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.24rem rgba(10, 37, 64, 0.2) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, #0a2540, #163a61);
+  border-color: #0a2540;
+  box-shadow: 0 6px 16px rgba(10, 37, 64, 0.24);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(120deg, #091f34, #0a2540);
+  border-color: #091f34;
+}
+
+.btn-outline-primary {
+  border-color: rgba(10, 37, 64, 0.45);
+  color: #0a2540;
+}
+
+.btn-outline-primary:hover {
+  background: rgba(10, 37, 64, 0.1);
+  color: #091f34;
+  border-color: #0a2540;
+}
+
+.text-info,
+.text-info-emphasis {
+  color: var(--bs-primary) !important;
+}
+
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.badge.bg-primary {
+  background: linear-gradient(120deg, #0a2540, #163a61) !important;
+}
+
+.badge.bg-secondary {
+  background: #6b7280 !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(120deg, #e64d2e, #ff6b00) !important;
+}
+
+.alert {
+  border-radius: 0.9rem;
+  border: 1px solid var(--ui-border);
+}
+
+.alert-info {
+  background: #e8eff6;
+  border-color: rgba(10, 37, 64, 0.25);
+  color: #0a2540;
+}
+
+.alert-warning {
+  background: #fff4e7;
+  border-color: rgba(255, 107, 0, 0.35);
+}
+
+.alert-danger {
+  background: #ffecec;
+  border-color: rgba(225, 63, 94, 0.35);
+}
+
+.pagination .page-link {
+  border-color: var(--ui-border);
+  color: #1f2937;
+  border-radius: 0.6rem !important;
+  margin-inline: 0.12rem;
+}
+
+.pagination .page-link:hover {
+  background: rgba(10, 37, 64, 0.1);
+  color: #0a2540;
+}
+
+.pagination .page-item.active .page-link {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.nav-tabs {
+  border-bottom-color: var(--ui-border);
+}
+
+.nav-pills .nav-link.active,
+.nav-tabs .nav-link.active {
+  background: rgba(10, 37, 64, 0.12);
+  color: #0a2540 !important;
+  border-color: rgba(10, 37, 64, 0.18) !important;
+}
+
+.accordion-item {
+  border: 1px solid var(--ui-border);
+  border-radius: 0.85rem !important;
+  overflow: hidden;
+  margin-bottom: 0.45rem;
+}
+
+.accordion-button {
+  font-weight: 600;
+  color: #1f2937;
+  background: #f9fbfd;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0a2540;
+  background: rgba(10, 37, 64, 0.1);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.18rem rgba(10, 37, 64, 0.14);
+}
+
+.list-group-item {
+  background: transparent;
+  border-color: var(--ui-border);
+}
+
+.sports-hero {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 107, 0, 0.24), transparent 26%),
+    linear-gradient(110deg, #0a2540, #163a61 48%, #0f2f50 100%);
+  border-radius: 1.3rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.24);
+}
+
+.sports-hero .btn-light {
+  background: #ffffff;
+  color: #0a2540;
+  border: none;
+}
+
+.sports-feature-strip {
+  background: linear-gradient(135deg, #f9fbfd, #f3f6fa);
+  border-radius: 1.2rem;
+  border: 1px solid rgba(10, 37, 64, 0.1);
+}
+
+.sports-feature-icon {
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.14), rgba(50, 215, 75, 0.14));
+  border: 1px solid rgba(10, 37, 64, 0.16);
+}
+
+.sports-footer {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 107, 0, 0.2), transparent 30%),
+    linear-gradient(130deg, #071a2d, #0a2540 60%, #163a61);
+}
+
+.sports-footer a:hover {
+  color: #ffffff !important;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 15.5px;
+  }
+
+  .sports-navbar {
+    padding-block: 0.65rem;
+  }
+
+  .sports-nav-collapse {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(10, 37, 64, 0.1);
+  }
+
+  .sports-nav-list {
+    gap: 0.45rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .sports-nav-list .sports-nav-link {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .sports-nav-actions {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.65rem !important;
+  }
+
+  .sports-action-cluster {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.65rem !important;
+    flex-wrap: wrap;
+  }
+
+  .sports-quick-links {
+    margin-right: 0;
+  }
+
+  .sports-user-identity {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0 !important;
+    padding: 0.2rem 0;
+  }
+
+  .sports-auth-buttons {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sports-auth-buttons .btn,
+  .sports-logout-btn {
+    flex: 1 1 48%;
+  }
+
+  .sports-main {
+    padding-top: 0.75rem;
+  }
+
+  button,
+  .btn,
+  [role="button"],
+  a.btn {
+    min-height: 2.9rem;
+    padding-inline: 0.95rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .form-control,
+  .form-select,
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  textarea,
+  select,
+  [role="combobox"],
+  [data-slot="input"] {
+    min-height: 2.9rem;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    line-height: 1.55;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.28rem;
+  }
+
+  h4 {
+    font-size: 1.12rem;
+  }
+
+  p,
+  li,
+  label,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.98rem;
+  }
+
+  .d-flex.gap-2 > .btn,
+  .d-flex.gap-3 > .btn,
+  .d-grid .btn {
+    width: 100%;
+  }
+
+  .sports-nav-actions {
+    gap: 0.5rem !important;
+  }
+
+  .sports-brand {
+    font-size: 1.28rem;
+  }
+
+  .sports-icon-link {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .sports-logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sports-auth-buttons .btn {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .sports-auth-buttons {
+    grid-template-columns: 1fr;
   }
 }

@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-gray-900">
-            BackpackHub
+            Sports Hub
           </Link>
 
           {/* Desktop Navigation */}
@@ -72,7 +72,7 @@ const Header = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <Input
                 type="text"
-                placeholder="Search backpacks..."
+                placeholder="Search badminton gear..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 pr-4"
@@ -152,7 +152,7 @@ const Header = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <Input
                     type="text"
-                    placeholder="Search backpacks..."
+                    placeholder="Search badminton gear..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10"
@@ -180,3 +180,4 @@ const Header = () => {
 };
 
 export default Header;
+

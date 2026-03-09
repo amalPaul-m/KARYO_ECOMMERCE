@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useNavigate, Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Navbar, Nav, Button, Row, Col } from "react-bootstrap";
-import { FaShoppingCart, FaUser, FaSignOutAlt, FaHeart, FaGift } from "react-icons/fa";
+import { FaShoppingCart, FaUser, FaSignOutAlt, FaHeart } from "react-icons/fa";
 import {
   logout as logoutAction,
   logoutUser,
@@ -67,36 +67,36 @@ const Layout = () => {
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="sports-shell d-flex flex-column min-vh-100">
       {/* Header */}
-      <Navbar bg="light" expand="lg" className="shadow-sm" style={{ position: 'relative', zIndex: 1000 }}>
+      <Navbar
+        expand="lg"
+        className="sports-navbar"
+        style={{ position: "sticky", top: 0, zIndex: 1100 }}
+      >
         <Container>
-          <Navbar.Brand as={Link} to="/" className="fw-bold text-primary">
-            CARYO
+          <Navbar.Brand as={Link} to="/" className="fw-bold text-primary sports-brand">
+            SPORTS HUB
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="sports-toggle" />
+          <Navbar.Collapse id="basic-navbar-nav" className="sports-nav-collapse">
+            <Nav className="me-auto sports-nav-list">
+              <Nav.Link as={Link} to="/" className="sports-nav-link">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/products">
+              <Nav.Link as={Link} to="/products" className="sports-nav-link">
                 Products
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
-                About
-              </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
-                Contact
-              </Nav.Link>
-              <Nav.Link as={Link} to="/offers" className="d-flex align-items-center">
-                <FaGift size={18} className="me-1" style={{ verticalAlign: 'middle' }} />
-                Offers
-              </Nav.Link>
             </Nav>
-            <div className="d-flex align-items-center gap-3" style={{ position: 'relative' }}>
+            <div
+              className="d-flex align-items-center gap-2 gap-md-3 sports-nav-actions"
+              style={{ position: "relative" }}
+            >
               {user && userAccessToken && (
-                <div className="d-flex align-items-center gap-2 me-3" style={{ position: 'relative', zIndex: 1001 }}>
+                <div
+                  className="d-flex align-items-center gap-2 me-lg-3 sports-user-identity"
+                  style={{ position: "relative", zIndex: 1001 }}
+                >
                   <span 
                     style={{ 
                       cursor: "pointer",
@@ -107,7 +107,7 @@ const Layout = () => {
                     }}
                     onClick={handleProfileClick}
                     title="Click to view profile"
-                    onMouseEnter={(e) => e.target.style.color = "#0056b3"}
+                    onMouseEnter={(e) => e.target.style.color = "#083f37"}
                     onMouseLeave={(e) => e.target.style.color = ""}
                     className="fw-semibold text-primary"
                   >
@@ -132,58 +132,67 @@ const Layout = () => {
                   />
                 </div>
               )}
-              <Link to="/wishlist" className="text-dark position-relative" style={{ zIndex: 1001 }}>
-                <FaHeart size={20} />
-                {wishlistCount > 0 && (
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {wishlistCount}
-                  </span>
-                )}
-              </Link>
-              <Link to="/cart" className="text-dark position-relative me-3" style={{ zIndex: 1001 }}>
-                <FaShoppingCart size={20} />
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {cartCount}
-                </span>
-              </Link>
-              {user && userAccessToken ? (
-                <Button
-                  variant="outline-danger"
-                  className="d-flex align-items-center gap-2"
-                  onClick={handleLogout}
-                  title="Logout"
-                  style={{ position: 'relative', zIndex: 1000 }}
-                >
-                  <FaSignOutAlt /> Logout
-                </Button>
-              ) : (
-                <div className="d-flex gap-2">
-                  <Button as={Link} to="/login" variant="outline-primary">
-                    Login
-                  </Button>
-                  <Button as={Link} to="/signup" variant="primary">
-                    Sign Up
-                  </Button>
+              <div className="sports-action-cluster d-flex align-items-center gap-2">
+                <div className="sports-quick-links d-flex align-items-center gap-2">
+                  <Link to="/wishlist" className="sports-icon-link position-relative" style={{ zIndex: 1001 }}>
+                    <FaHeart size={20} />
+                    {wishlistCount > 0 && (
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {wishlistCount}
+                      </span>
+                    )}
+                  </Link>
+                  <Link
+                    to="/cart"
+                    className="sports-icon-link position-relative me-lg-1"
+                    style={{ zIndex: 1001 }}
+                  >
+                    <FaShoppingCart size={20} />
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      {cartCount}
+                    </span>
+                  </Link>
                 </div>
-              )}
+
+                {user && userAccessToken ? (
+                  <Button
+                    variant="outline-danger"
+                    className="d-flex align-items-center gap-2 sports-logout-btn"
+                    onClick={handleLogout}
+                    title="Logout"
+                    style={{ position: "relative", zIndex: 1000 }}
+                  >
+                    <FaSignOutAlt /> Logout
+                  </Button>
+                ) : (
+                  <div className="d-flex gap-2 sports-auth-buttons">
+                    <Button as={Link} to="/login" variant="outline-primary">
+                      Login
+                    </Button>
+                    <Button as={Link} to="/signup" variant="primary">
+                      Sign Up
+                    </Button>
+                  </div>
+                )}
+              </div>
             </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       {/* Main Content */}
-      <main className="flex-grow-1">
+      <main className="sports-main flex-grow-1">
         <Outlet />
       </main>
 
       {/* Footer */}
-      <footer className="bg-dark text-white pt-5 pb-3 mt-auto">
+      <footer className="sports-footer text-white pt-5 pb-3 mt-auto">
         <Container>
           <Row className="mb-4">
             <Col md={4} className="mb-4 mb-md-0">
-              <h4 className="fw-bold mb-3">CARYO</h4>
+              <h4 className="fw-bold mb-3">SPORTS HUB</h4>
               <p className="text-muted small mb-3">
-                Your one-stop shop for high-quality backpacks and accessories.
+                Your one-stop hub for high-quality badminton gear and court essentials.
               </p>
               <div className="d-flex gap-3">
                 <a href="#" className="text-white-50 fs-5">
@@ -232,20 +241,28 @@ const Layout = () => {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/offers"
+                    className="text-white-50 text-decoration-none"
+                  >
+                    Offers
+                  </Link>
+                </li>
               </ul>
             </Col>
             <Col md={3} className="mb-4 mb-md-0">
               <h6 className="text-uppercase mb-3">Contact</h6>
               <ul className="list-unstyled text-white-50 small">
                 <li className="mb-2">
-                  <i className="fas fa-map-marker-alt me-2"></i>123 Backpack
-                  Street, City
+                  <i className="fas fa-map-marker-alt me-2"></i>123 Shuttle
+                  Court, City
                 </li>
                 <li className="mb-2">
                   <i className="fas fa-phone me-2"></i>(123) 456-7890
                 </li>
                 <li>
-                  <i className="fas fa-envelope me-2"></i>info@caryo.com
+                  <i className="fas fa-envelope me-2"></i>info@sportshub.com
                 </li>
               </ul>
             </Col>
@@ -265,7 +282,7 @@ const Layout = () => {
           </Row>
           <hr className="border-secondary opacity-50" />
           <div className="text-center text-white-50 small">
-            &copy; 2024 CARYO. All rights reserved.
+            &copy; 2026 SPORTS HUB. All rights reserved.
           </div>
         </Container>
       </footer>
@@ -274,3 +291,7 @@ const Layout = () => {
 };
 
 export default Layout;
+
+
+
+

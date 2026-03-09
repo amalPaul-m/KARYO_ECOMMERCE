@@ -779,7 +779,7 @@ const UserProfile = () => {
   const handleShareReferralCode = () => {
     if (navigator.share && referralCode) {
       navigator.share({
-        title: "Join me on our platform!",
+        title: "Join me on Sports Hub!",
         text: `Use my referral code: ${referralCode}`,
         url: window.location.origin,
       });
@@ -2510,3 +2510,4 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+

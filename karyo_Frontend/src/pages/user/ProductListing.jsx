@@ -103,6 +103,8 @@ const ProductListing = () => {
 
   // Helper function to build filter parameters
   const buildFilterParams = (page = 1, search = searchQuery, currentFilters = filters, currentSort = sort) => {
+    const DEFAULT_MIN_PRICE = 0;
+    const DEFAULT_MAX_PRICE = 5000;
     const params = {
       page,
       limit: 6,
@@ -130,8 +132,16 @@ const ProductListing = () => {
 
     // Add price range filter
     if (currentFilters.priceRange && currentFilters.priceRange.length === 2) {
-      params.minPrice = currentFilters.priceRange[0];
-      params.maxPrice = currentFilters.priceRange[1];
+      const [minPrice, maxPrice] = currentFilters.priceRange;
+      const isDefaultPriceRange =
+        Number(minPrice) === DEFAULT_MIN_PRICE &&
+        Number(maxPrice) === DEFAULT_MAX_PRICE;
+
+      // Do not send default range; it should behave like no price filter.
+      if (!isDefaultPriceRange) {
+        params.minPrice = minPrice;
+        params.maxPrice = maxPrice;
+      }
     }
 
     return params;

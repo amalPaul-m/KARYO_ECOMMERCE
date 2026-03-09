@@ -569,7 +569,7 @@ const Cart = () => {
                   )}
                   
                   {!isDisabled && (
-                    <p style={{ margin: "0.25rem 0 0 0", color: "#007bff", fontSize: "12px", fontStyle: "italic" }}>
+                    <p style={{ margin: "0.25rem 0 0 0", color: "#0b4f45", fontSize: "12px", fontStyle: "italic" }}>
                       Click to view product details
                     </p>
                   )}

@@ -1,10 +1,10 @@
-/* Image Cropper Styles */
 .crop-container {
   position: relative;
   height: 400px;
-  background: #f8f9fa;
-  border-radius: 8px;
+  background: #f3f6fa;
+  border-radius: 12px;
   overflow: hidden;
+  border: 1px solid rgba(10, 37, 64, 0.14);
 }
 
 .crop-area {
@@ -22,16 +22,14 @@
   margin-bottom: 0.5rem;
 }
 
-.zoom-value {
+.zoom-value,
+.crop-instructions {
   text-align: center;
-  color: #6c757d;
+  color: #6b7280;
   font-size: 0.875rem;
 }
 
 .crop-instructions {
-  text-align: center;
-  color: #6c757d;
-  font-size: 0.875rem;
   margin-top: 1rem;
 }
 
@@ -46,12 +44,12 @@
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 4px;
-  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  border: 2px solid rgba(10, 37, 64, 0.16);
 }
 
 .crop-preview:hover {
-  border-color: #007bff;
+  border-color: #0a2540;
 }
 
 .image-preview-container {
@@ -71,7 +69,7 @@
 .crop-button {
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0.45rem;
 }
 
 .crop-button:hover {
@@ -83,60 +81,56 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #007bff;
-  color: white;
+  background-color: #0a2540;
+  color: #fff;
   padding: 0.125rem 0.375rem;
   border-radius: 0.25rem;
   font-size: 0.75rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .crop-container {
     height: 300px;
   }
-  
+
   .crop-preview {
     width: 60px;
     height: 60px;
   }
-  
+
   .image-preview-overlay {
     gap: 0.125rem;
   }
-  
+
   .crop-button {
     padding: 0.125rem 0.25rem;
     font-size: 0.625rem;
   }
 }
 
-/* Loading state */
 .crop-loading {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 400px;
-  background: #f8f9fa;
-  border-radius: 8px;
+  background: #f3f6fa;
+  border-radius: 12px;
 }
 
-/* Error state */
 .crop-error {
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
+  background-color: #ffecec;
+  border: 1px solid rgba(225, 63, 94, 0.35);
+  color: #8a1f35;
   padding: 0.75rem;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
-/* Success state */
 .crop-success {
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
+  background-color: #e6f8ea;
+  border: 1px solid rgba(50, 215, 75, 0.34);
+  color: #0a6f1b;
   padding: 0.75rem;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
-} 
+}

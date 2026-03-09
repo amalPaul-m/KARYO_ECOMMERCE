@@ -149,7 +149,7 @@ const Wallet = () => {
         key: key_id,
         amount: order.amount,
         currency: order.currency,
-        name: "Caryo",
+        name: "Sports Hub",
         description: description || "Wallet Recharge",
         order_id: order.id,
         handler: async function (response) {
@@ -416,3 +416,4 @@ const Wallet = () => {
 };
 
 export default Wallet;
+
